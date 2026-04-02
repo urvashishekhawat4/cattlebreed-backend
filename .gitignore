@@ -1,0 +1,23 @@
+# Environment variables — do NOT commit this file
+.env
+
+# Python cache
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual environment
+venv/
+env/
+
+# Database
+database.db
+
+# Uploaded images
+uploads/
+
+# Model weights (large files — store separately or use Git LFS)
+*.pth
+
+# Logs
+*.log

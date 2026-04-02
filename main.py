@@ -6,6 +6,9 @@ import jwt
 import uuid
 import shutil
 from typing import List, Optional
+from dotenv import load_dotenv
+
+load_dotenv()  # Load variables from .env file
 
 import torch
 import torch.nn as nn
@@ -29,8 +32,9 @@ BREED_CLASSES = [
 ]
 BCS_CLASSES = ["fat", "moderate", "thin"]
 
-JWT_SECRET = "super-secret-key-for-dev-only"  # Should be in .env for production
+JWT_SECRET = os.environ.get("JWT_SECRET", "fallback-secret-change-me")
 JWT_ALGORITHM = "HS256"
+BACKEND_URL = os.environ.get("BACKEND_URL", "http://localhost:5000")
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
@@ -168,7 +172,7 @@ def upload_profile_picture(image: UploadFile = File(...), db: Session = Depends(
     with open(filepath, "wb") as buffer:
         shutil.copyfileobj(image.file, buffer)
         
-    current_user.profile_picture_url = f"http://localhost:5000/uploads/{filename}"
+    current_user.profile_picture_url = f"{BACKEND_URL}/uploads/{filename}"
     db.commit()
     
     return {"message": "Profile picture updated", "profile_picture_url": current_user.profile_picture_url}
@@ -234,4 +238,5 @@ async def predict(image: UploadFile = File(...), db: Session = Depends(get_db), 
 
 if __name__ == "__main__":
     import uvicorn
-    uvicorn.run("main:app", host="0.0.0.0", port=5000, reload=True)
+    port = int(os.environ.get("PORT", 5000))
+    uvicorn.run("main:app", host="0.0.0.0", port=port, reload=False)
