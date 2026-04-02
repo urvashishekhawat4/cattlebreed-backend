@@ -1,0 +1,66 @@
+Using device: cpu
+Loading Breed data from C:\Users\Pooja\cattle-breed\rajasthan_cattle_dataset\rajasthan_cattle_dataset\train...
+--> Found existing weights at C:\Users\Pooja\cattle-breed\backend\rajasthan_cattle_modell.pth, resuming...
+Baseline Val Acc before resuming: 0.6581
+Epoch 1/11
+----------
+train Loss: 0.7179 Acc: 0.7460
+val Loss: 0.5399 Acc: 0.8064
+--> Saved better weights (Breed Acc: 0.806394) to C:\Users\Pooja\cattle-breed\backend\rajasthan_cattle_modell.pth
+
+Epoch 2/11
+----------
+train Loss: 0.7973 Acc: 0.7238
+val Loss: 1.8415 Acc: 0.5142
+
+Epoch 3/11
+----------
+train Loss: 1.2413 Acc: 0.5684
+val Loss: 2.9173 Acc: 0.3499
+
+Epoch 4/11
+----------
+train Loss: 1.1318 Acc: 0.5835
+val Loss: 1.5476 Acc: 0.5311
+
+Epoch 5/11
+----------
+train Loss: 0.8353 Acc: 0.7007
+val Loss: 0.8097 Acc: 0.6892
+
+Epoch 6/11
+----------
+train Loss: 0.7399 Acc: 0.7265
+val Loss: 0.6746 Acc: 0.7496
+
+Epoch 7/11
+----------
+train Loss: 0.6412 Acc: 0.7682
+val Loss: 0.5104 Acc: 0.8002
+
+Epoch 8/11
+----------
+train Loss: 0.4018 Acc: 0.8544
+val Loss: 0.2082 Acc: 0.9361
+--> Saved better weights (Breed Acc: 0.936057) to C:\Users\Pooja\cattle-breed\backend\rajasthan_cattle_modell.pth
+
+Epoch 9/11
+----------
+train Loss: 0.2932 Acc: 0.8961
+val Loss: 0.1688 Acc: 0.9449
+--> Saved better weights (Breed Acc: 0.944938) to C:\Users\Pooja\cattle-breed\backend\rajasthan_cattle_modell.pth
+
+Epoch 10/11
+----------
+train Loss: 0.2139 Acc: 0.9361
+val Loss: 0.1393 Acc: 0.9458
+--> Saved better weights (Breed Acc: 0.945826) to C:\Users\Pooja\cattle-breed\backend\rajasthan_cattle_modell.pth
+
+Epoch 11/11
+----------
+train Loss: 0.1814 Acc: 0.9432
+val Loss: 0.1286 Acc: 0.9538
+--> Saved better weights (Breed Acc: 0.953819) to C:\Users\Pooja\cattle-breed\backend\rajasthan_cattle_modell.pth
+
+Training complete in 62m 41s
+Best val Acc: 0.953819

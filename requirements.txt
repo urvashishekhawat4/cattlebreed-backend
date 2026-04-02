@@ -1,0 +1,9 @@
+torch
+torchvision
+Pillow
+fastapi
+uvicorn
+python-multipart
+SQLAlchemy
+bcrypt
+PyJWT
